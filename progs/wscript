@@ -10,7 +10,7 @@ def build(ctx):
         source=src_dir.ant_glob('TestLattice.cc'),
         includes=[lat_inc_dir],
         lib=ctx.env.LIB_NTL + ctx.env.LIB_GMP  + ctx.env.LIB_MYLIB,
-        stlib=ctx.env.STLIB_NTL + ctx.env.LIB_GMP + ctx.env.STLIB_MYLIB,
+        stlib=ctx.env.STLIB_NTL + ctx.env.STLIB_MYLIB,
         target=('TestLattice'),
         use=['latticetester'],
         install_path='${BINDIR}')
